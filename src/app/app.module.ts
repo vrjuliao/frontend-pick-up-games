@@ -20,6 +20,7 @@ import { NotificationsComponent }   from './notifications/notifications.componen
 import { UpgradeComponent }   from './upgrade/upgrade.component';
 import { CardItemComponent } from './card-item/card-item.component';
 import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
+import { PickupStatsComponent } from './pickup-stats/pickup-stats.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NewDashboardComponent } from './new-dashboard/new-dashboard.component';
     NotificationsComponent,
     UpgradeComponent,
     CardItemComponent,
-    NewDashboardComponent
+    NewDashboardComponent,
+    PickupStatsComponent
   ],
   imports: [
     BrowserModule,

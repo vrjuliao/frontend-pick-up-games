@@ -10,6 +10,7 @@ import { NotificationsComponent }   from './notifications/notifications.componen
 import { UpgradeComponent }   from './upgrade/upgrade.component';
 import { CardItemComponent }   from './card-item/card-item.component';
 import { NewDashboardComponent }   from './new-dashboard/new-dashboard.component';
+import { PickupStatsComponent } from './pickup-stats/pickup-stats.component';
 
 export const AppRoutes: Routes = [
     {
@@ -57,5 +58,9 @@ export const AppRoutes: Routes = [
     {
         path: 'newdashboard',
         component: NewDashboardComponent
+    },
+    {
+        path: 'resumo/:pickup_id',
+        component: PickupStatsComponent
     }
 ]
