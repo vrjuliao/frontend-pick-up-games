@@ -24,6 +24,7 @@ import { PickupStatsComponent } from './pickup-stats/pickup-stats.component';
 import { ChipInComponent } from './chip-in/chip-in.component';
 import { GroupComponent } from './group/group.component';
 import { PickupGroupsComponent } from './pickup-groups/pickup-groups.component';
+import { SmallCardItemComponent } from './small-card-item/small-card-item.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PickupGroupsComponent } from './pickup-groups/pickup-groups.component';
     PickupStatsComponent,
     ChipInComponent,
     GroupComponent,
-    PickupGroupsComponent
+    PickupGroupsComponent,
+    SmallCardItemComponent
   ],
   imports: [
     BrowserModule,

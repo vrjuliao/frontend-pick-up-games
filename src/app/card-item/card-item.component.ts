@@ -11,6 +11,7 @@ export class CardItemComponent implements OnInit {
   }
 
   @Input() row: Object;
+  @Input() showImage: boolean;
 
   ngOnInit() {
     // this.row = {
