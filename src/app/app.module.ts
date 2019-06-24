@@ -25,6 +25,7 @@ import { ChipInComponent } from './chip-in/chip-in.component';
 import { GroupComponent } from './group/group.component';
 import { PickupGroupsComponent } from './pickup-groups/pickup-groups.component';
 import { SmallCardItemComponent } from './small-card-item/small-card-item.component';
+import {HttpClientModule} from '@angular/common/http' 
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SmallCardItemComponent } from './small-card-item/small-card-item.compon
     SidebarModule,
     NavbarModule,
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    HttpClientModule
     //NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
 
   ],
