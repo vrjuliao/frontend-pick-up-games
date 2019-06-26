@@ -26,6 +26,8 @@ import { GroupComponent } from './group/group.component';
 import { PickupGroupsComponent } from './pickup-groups/pickup-groups.component';
 import { SmallCardItemComponent } from './small-card-item/small-card-item.component';
 import {HttpClientModule} from '@angular/common/http' 
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import {HttpClientModule} from '@angular/common/http'
     ChipInComponent,
     GroupComponent,
     PickupGroupsComponent,
-    SmallCardItemComponent
+    SmallCardItemComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
