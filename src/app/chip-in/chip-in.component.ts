@@ -18,30 +18,34 @@ export class ChipInComponent implements OnInit {
     console.log(this.group_id);
     this.chipin = [
       {
+        id: 321,
         name: "Pelada dos cria",
-        place: "Rua de baixo, numero 22",
+        description: "Rua de baixo, numero 22",
         date: "22/22",
-        time: "30:30"
+        value: "19,43"
       },
       {
+        id: 321,
         name: "Só marotos",
-        place: "Rua de baixo, numero 22",
+        description: "Rua de baixo, numero 22",
         date: "22/22",
-        time: "30:30"
+        value: "19,43"
       }
     ];
     this.chipinAdm = [
       {
+        id: 321,
         name: "Pelada dos cria",
-        place: "Rua de baixo, numero 22",
+        description: "Rua de baixo, numero 22",
         date: "22/22",
-        time: "30:30"
+        value: "19,43"
       },
       {
+        id: 321,
         name: "Só marotos",
-        place: "Rua de baixo, numero 22",
+        description: "Rua de baixo, numero 22",
         date: "22/22",
-        time: "30:30"
+        value: "19,43"
       }
     ];
   }

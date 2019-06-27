@@ -17,6 +17,8 @@ import { PickupGroupsComponent } from './pickup-groups/pickup-groups.component';
 import { SmallCardItemComponent } from './small-card-item/small-card-item.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ChipInDetailsComponent } from './chip-in-details/chip-in-details.component';
+import { StatsComponent } from './stats/stats.component';
 
 export const AppRoutes: Routes = [
     {
@@ -92,5 +94,13 @@ export const AppRoutes: Routes = [
     {
         path: 'register',
         component: RegisterComponent
+    },
+    {
+        path: 'vaquinha/:chipin_id',
+        component: ChipInDetailsComponent
+    },
+    {
+        path: 'historico',
+        component: StatsComponent
     }
 ]

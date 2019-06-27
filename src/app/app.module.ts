@@ -28,6 +28,9 @@ import { SmallCardItemComponent } from './small-card-item/small-card-item.compon
 import {HttpClientModule} from '@angular/common/http' 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ChipInDetailsComponent } from './chip-in-details/chip-in-details.component';
+import { ChipInCardComponent } from './chip-in-card/chip-in-card.component';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { RegisterComponent } from './register/register.component';
     PickupGroupsComponent,
     SmallCardItemComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ChipInDetailsComponent,
+    ChipInCardComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
