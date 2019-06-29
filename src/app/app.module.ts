@@ -10,6 +10,9 @@ import { NavbarModule} from './shared/navbar/navbar.module';
 import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 //import { NguiMapModule} from '@ngui/map';
 
+// import { AngularFireModule } from "angularfire2";
+// import { AngularFireAuth } from "angularfire2/auth";
+
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { UserComponent }   from './user/user.component';
 import { TableComponent }   from './table/table.component';
@@ -64,10 +67,24 @@ import { StatsComponent } from './stats/stats.component';
     FooterModule,
     FixedPluginModule,
     HttpClientModule
+    // AngularFireModule.initializeApp(firebaseConfig)
     //NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
+  // Your web app's Firebase configuration
+export const firebaseConfig = {
+  apiKey: "AIzaSyBpe-z-tArhj19lWx0ZTSOPMPzpNI-YWd0",
+  authDomain: "pick-up-games-ufmg.firebaseapp.com",
+  databaseURL: "https://pick-up-games-ufmg.firebaseio.com",
+  projectId: "pick-up-games-ufmg",
+  storageBucket: "",
+  messagingSenderId: "708200264695",
+  appId: "1:708200264695:web:c942f3ef839fb4d8"
+}
+
