@@ -64,42 +64,42 @@ export const AppRoutes: Routes = [
     {
         path: 'newdashboard',
         component: NewDashboardComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'resumo/:pickup_id',
         component: PickupStatsComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'vaquinhas',
         component: ChipInComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'grupos',
         component: PickupGroupsComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'grupo/:group_id',
         component: GroupComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'smallcard',
         component: SmallCardItemComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'vaquinha/:chipin_id',
         component: ChipInDetailsComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'historico',
         component: StatsComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: '',
@@ -109,11 +109,11 @@ export const AppRoutes: Routes = [
     {
         path: 'login',
         component: LoginComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     {
         path: 'jogo/:pickup_id',
         component: ScoutJudgeComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     }
 ]

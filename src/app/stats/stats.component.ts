@@ -55,7 +55,16 @@ export class StatsComponent implements OnInit {
       }]
     ];
 
-    new Chartist.Bar('#chartBar', data, options);
+    new Chartist.Bar('#chartBar', data, options, [
+      ["screen and (max-width: 640px)", {
+        seriesBarDistance: 5,
+        axisX: {
+          labelInterpolationFnc: function (value) {
+            return value[0];
+          }
+        }
+      }]
+    ]);
     
   }
 

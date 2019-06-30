@@ -16,17 +16,19 @@ export class AuthGuard implements CanActivate {
         // console.log("VERIFY");
         // console.log(localStorage['token']);
 
-        var unLogged: boolean = localStorage['token'] === undefined || localStorage['token'] === '';
+        // var unLogged: boolean = localStorage['token'] === undefined || localStorage['token'] === '' || localStorage['token'] === null;
+        var unLogged: boolean = (localStorage['token'] == undefined);
+         
         if (unLogged) {
             this.router.navigate(['/login']);
         }
 
-        var titlee = window.location.pathname;
+        // var titlee = window.location.pathname;
         // titlee = titlee.substring(1);
-        console.log(titlee);
-        if(titlee.indexOf('login') >= 0 && !unLogged){
-            this.router.navigate(['/newdashboard']);
-        }
+        // console.log(titlee);
+        // if(titlee.indexOf('login') >= 0 && !unLogged){
+        //     this.router.navigate(['']);
+        // }
 
         if (localStorage['token'] !== 'null') {
             return true;
