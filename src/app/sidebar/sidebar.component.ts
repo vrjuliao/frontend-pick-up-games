@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../models/user';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 declare var $:any;
 
@@ -32,6 +34,15 @@ export const ROUTES: RouteInfo[] = [
 
 export class SidebarComponent implements OnInit {
     public menuItems: any[];
+    private user: User;
+    constructor(public afAuth: AngularFireAuth){
+        this.user = {
+            image: localStorage['image'],
+            name: localStorage['name'],
+            token: localStorage['token'],
+            uid: localStorage['uid']
+        };
+    }
     ngOnInit() {
         this.menuItems = ROUTES.filter(menuItem => menuItem);
     }
@@ -40,6 +51,21 @@ export class SidebarComponent implements OnInit {
             return false;
         }
         return true;
+    }
+    logout(){
+        console.log("clicked");
+        localStorage['image'] = '';
+        localStorage['name'] = '';
+        localStorage['token'] = '';
+        localStorage['uid'] = '';
+        this.user.image = '';
+        this.user.name = '';
+        this.user.token = '';
+        this.user.uid = '';
+        this.afAuth.auth.signOut().then(function() {
+            localStorage.clear();
+            window.location.reload();
+        });
     }
 
 }

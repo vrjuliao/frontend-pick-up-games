@@ -55,7 +55,7 @@ export class StatsComponent implements OnInit {
       }]
     ];
 
-    new Chartist.Bar('#chartBar', data, options, responsiveOptions);
+    new Chartist.Bar('#chartBar', data, options);
     
   }
 

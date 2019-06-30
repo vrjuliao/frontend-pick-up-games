@@ -34,6 +34,25 @@ import { RegisterComponent } from './register/register.component';
 import { ChipInDetailsComponent } from './chip-in-details/chip-in-details.component';
 import { ChipInCardComponent } from './chip-in-card/chip-in-card.component';
 import { StatsComponent } from './stats/stats.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthGuard } from './auth-guards/auth.guards'
+import { LoginService } from './services/login-service';
+import { ScoutJudgeComponent } from './scout-judge/scout-judge.component'
+
+
+// Your web app's Firebase configuration
+export const firebaseConfig = {
+  apiKey: "AIzaSyBpe-z-tArhj19lWx0ZTSOPMPzpNI-YWd0",
+  authDomain: "pick-up-games-ufmg.firebaseapp.com",
+  databaseURL: "https://pick-up-games-ufmg.firebaseio.com",
+  projectId: "pick-up-games-ufmg",
+  storageBucket: "",
+  messagingSenderId: "708200264695",
+  appId: "1:708200264695:web:c942f3ef839fb4d8"
+}
 
 @NgModule({
   declarations: [
@@ -57,7 +76,8 @@ import { StatsComponent } from './stats/stats.component';
     RegisterComponent,
     ChipInDetailsComponent,
     ChipInCardComponent,
-    StatsComponent
+    StatsComponent,
+    ScoutJudgeComponent
   ],
   imports: [
     BrowserModule,
@@ -66,25 +86,14 @@ import { StatsComponent } from './stats/stats.component';
     NavbarModule,
     FooterModule,
     FixedPluginModule,
-    HttpClientModule
-    // AngularFireModule.initializeApp(firebaseConfig)
+    HttpClientModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
     //NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
 
   ],
-  providers: [],
+  providers: [AuthGuard, LoginService, AngularFireModule, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 
 export class AppModule { }
-
-  // Your web app's Firebase configuration
-export const firebaseConfig = {
-  apiKey: "AIzaSyBpe-z-tArhj19lWx0ZTSOPMPzpNI-YWd0",
-  authDomain: "pick-up-games-ufmg.firebaseapp.com",
-  databaseURL: "https://pick-up-games-ufmg.firebaseio.com",
-  projectId: "pick-up-games-ufmg",
-  storageBucket: "",
-  messagingSenderId: "708200264695",
-  appId: "1:708200264695:web:c942f3ef839fb4d8"
-}
-

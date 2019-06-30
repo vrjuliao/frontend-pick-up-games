@@ -11,8 +11,9 @@
     <ul class="nav">
             <div style="margin-top: 55px;" class="card-user">
                 <div class="author">
-                    <img class="avatar border-white" src="assets/img/faces/face-2.jpg" alt="..."/>
-                    <h4 style="margin-top: 0;" class="title">Chet Faker</h4>
+                    <img class="avatar border-white" src="{{user.image}}" alt="..."/>
+                    <h4 style="margin-top: 0;" class="title">{{user.name}}</h4>
+                    <button style="margin: 8px;" class="btn btn-sm btn-success btn-icon" (click)="logout()">Logout</button>
                 </div>
                 <hr>
             </div>
