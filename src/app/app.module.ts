@@ -39,7 +39,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthGuard } from './auth-guards/auth.guards'
-import { LoginService } from './services/login-service';
+import { HttpUtilService } from './services/http-util-service';
 import { ScoutJudgeComponent } from './scout-judge/scout-judge.component'
 
 
@@ -88,11 +88,10 @@ export const firebaseConfig = {
     FixedPluginModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule,
+    AngularFireAuthModule
     //NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
-
   ],
-  providers: [AuthGuard, LoginService, AngularFireModule, AngularFireAuth],
+  providers: [AuthGuard, HttpUtilService, AngularFireModule, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 
